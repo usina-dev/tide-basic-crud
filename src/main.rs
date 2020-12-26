@@ -160,8 +160,7 @@ async fn main() {
     dotenv::dotenv().ok();
 
     tide::log::start();
-    let db_url = std::env::var("QOVERY_DATABASE_MY_DB_CONNECTION_URI").unwrap();
-    // let db_url = std::env::var("DATABASE_URL").unwrap();
+    let db_url = std::env::var("DATABASE_URL").unwrap();
     let db_pool = make_db_pool(&db_url).await;
 
     let app = server(db_pool).await;
