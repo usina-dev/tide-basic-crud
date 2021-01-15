@@ -8,6 +8,9 @@ databases:
   name: tide-db
 routers:
 - name: main
+  custom_domains:
+    - branch: main
+      domain: tide-basic-crud.javierviola.com
   routes:
   - application_name: tide-basic-crud
     paths:
